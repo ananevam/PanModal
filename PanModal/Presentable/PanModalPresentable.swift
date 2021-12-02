@@ -48,7 +48,7 @@ public protocol PanModalPresentable: AnyObject {
     /**
      The height of the pan modal container view
      when in the longForm presentation state.
-     
+
      This value is capped to .max, if provided value exceeds the space available.
 
      Default value is .max.
@@ -173,9 +173,11 @@ public protocol PanModalPresentable: AnyObject {
      */
     var showDragIndicator: Bool { get }
 
+    var isAppearanceTransition: Bool { get }
+
     /**
      Asks the delegate if the pan modal should respond to the pan modal gesture recognizer.
-     
+
      Return false to disable movement on the pan modal but maintain gestures on the presented view.
 
      Default value is true.
